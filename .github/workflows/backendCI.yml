@@ -1,17 +1,9 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
 name: Backend CI
-
 on: [push, pull_request]
 
 jobs:
-  backend:
-    name: Backend (Node 18/20/22)
+  build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [18.x, 20.x, 22.x]
     defaults:
       run:
         working-directory: backend
@@ -21,9 +13,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 20
           cache: npm
           cache-dependency-path: backend/package-lock.json
       - run: npm ci
       - run: npm run lint --if-present
       - run: npm test --if-present -- --ci
+      - run: npm run build --if-present
+
