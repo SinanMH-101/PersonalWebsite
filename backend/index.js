@@ -1,8 +1,12 @@
-import express from "express";
+import express, { response } from "express";
 import bodyParser from "body-parser";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import cors from "cors";
+import mongoose from 'mongoose';
+import dotenv from "dotenv";
+import Project from "./models/projects.js";
+dotenv.config();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -10,24 +14,21 @@ const app = express()
 app.use(express.json());
 app.use(cors());
 
-const projects = [
-    { id: 1, title: "CleanWalk", short_desc: "abc", long_desc: "xyz" },
-    { id: 2, title: "CleanWalk", short_desc: "abc", long_desc: "xyz" },
-    { id: 3, title: "CleanWalk", short_desc: "abc", long_desc: "xyz" },
-    { id: 4, title: "CleanWalk", short_desc: "abc", long_desc: "xyz" },
-    { id: 5, title: "CleanWalk", short_desc: "abc", long_desc: "xyz" }
-];
+await mongoose.connect(process.env.MONGODB_URI);
 
 app.get('/', (request, response) => {
-    response.send('<h1>Main Page2</h1>')
+    response.send('<h1>Main Page</h1>')
 })
 
-app.get("/api/projects", (_req, res) => res.json(projects));
+app.get("/api/projects", (_req, res) => {
+    Project.find({}).then(projects => {
+        res.json(projects)
+    })
+});
 
 
-app.get("/api/projects/:id", (req, res) => {
-    const id = Number(req.params.id);
-    const project = projects.find(p => p.id === id);
+app.get("/api/projects/:id", async (req, res) => {
+    const project = await Project.findById(req.params.id);
     if (!project) return res.status(404).json({ error: "Project not found" });
     res.json(project);
 });
@@ -39,6 +40,6 @@ app.get('/api/contact', (request, response) => {
 
 
 
-const PORT = 3001
+const PORT = process.env.PORT
 app.listen(PORT)
 console.log(`Server running on http://localhost:${PORT}/`)
