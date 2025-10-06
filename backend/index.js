@@ -1,11 +1,12 @@
 import express, { response } from "express";
-import bodyParser from "body-parser";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import cors from "cors";
 import mongoose from 'mongoose';
 import dotenv from "dotenv";
 import Project from "./models/projects.js";
+import WorkExp from "./models/workexp.js"
+
 dotenv.config();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -32,6 +33,12 @@ app.get("/api/projects/:id", async (req, res) => {
     if (!project) return res.status(404).json({ error: "Project not found" });
     res.json(project);
 });
+
+app.get("/api/workexp", (_req, res) => {
+    WorkExp.find({}).then(exp => {
+        res.json(exp)
+    })
+})
 
 app.get('/api/contact', (request, response) => {
     const id = request.params.id
