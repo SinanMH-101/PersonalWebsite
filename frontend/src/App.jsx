@@ -8,7 +8,7 @@ const App = () => {
     <div>
       <Header />
       <Project></Project>
-      {/* <WorkExp></WorkExp> */}
+      <WorkExp></WorkExp>
     </div>
   );
 };
