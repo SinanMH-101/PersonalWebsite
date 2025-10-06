@@ -1,0 +1,25 @@
+.heading-container {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    margin: 0px 5%;
+}
+
+.heading-title {
+    color: #d8d8d8;
+    text-align: center;
+}
+
+.heading-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.heading-list li:hover {
+    color: #00bfff;
+    cursor: pointer;
+}

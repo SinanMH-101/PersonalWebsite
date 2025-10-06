@@ -1,0 +1,41 @@
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+import styles from "./ProjectCard.module.css";
+
+const barVariants = {
+    rest: { height: 52, backgroundColor: "rgba(0,0,0,0.80)" },
+    hover: { height: 150, backgroundColor: "rgba(0,0,0,0.55)" }
+};
+
+const ProjectCard = ({ title, short_desc }) => {
+    return (
+        <div>
+            <motion.figure
+                className={styles.card}
+                initial="rest"
+                animate="rest"
+                whileHover="hover"         // hover anywhere on the figure
+                whileFocus="hover"         // keyboard focus support (tab)
+                tabIndex={0}
+            >
+                <img
+                    className={styles.image}
+                    src="https://cdn-useast1.kapwing.com/static/templates/crying-cat-meme-template-regular-096fc808.webp"
+                    alt={title}
+                />
+                <figcaption className={styles.caption}>
+                    <motion.div
+                        className={styles.text}
+                        variants={barVariants}
+                        transition={{ duration: 0.22, ease: "easeInOut" }}
+                    >
+                        <h1 className={styles.cardTitle}>{title}</h1>
+                        <p className={styles.desc}>{short_desc}</p>
+                    </motion.div>
+                </figcaption>
+            </motion.figure>
+        </div>
+    );
+};
+
+export default ProjectCard;

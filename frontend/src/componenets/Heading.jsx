@@ -1,9 +1,15 @@
-const Heading = () =>{
-    return(
-        <div>
-            <h1>Sinan Mustanjid Haque</h1>
-        </div>
-    )
-}
+import "./Heading.css";
 
-export default Heading 
+const Heading = () => (
+    <div className="heading-container">
+        <h1 className="heading-title">Sinan Mustanjid Haque</h1>
+        <ul className="heading-list">
+            <li>CV</li>
+            <li>Transcript</li>
+            <li>LinkedIn</li>
+            <li>Github</li>
+        </ul>
+    </div>
+);
+
+export default Heading;

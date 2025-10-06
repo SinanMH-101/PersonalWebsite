@@ -1,0 +1,20 @@
+.container {
+    margin: 50px 5%;
+}
+
+.scroller {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.item {
+    flex: 0 0 350px;
+    /* match your card width */
+    scroll-snap-align: start;
+    /* snap each card */
+}
