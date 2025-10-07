@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { FaFileDownload } from "react-icons/fa";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
@@ -11,10 +12,28 @@ const Navbar = () => {
             <NavLink to="/" end className={getClass}>Home</NavLink>
             <NavLink to="/projects" className={getClass}>Projects</NavLink>
 
+             <button className={styles.btn}>Contact</button>
+
             {/* Convert these to real routes later */}
-            <button className={styles.btn}>CV</button>
-            <button className={styles.btn}>Transcript</button>
-            <button className={styles.btn}>Contact</button>
+            <Link to="/files/Sinan Haque CV.pdf" target="_blank" download>
+                <button className={styles.btn}>
+                    <div className={styles.dwn}>
+                        <FaFileDownload /> CV
+                    </div>
+                </button>
+            </Link>
+
+            <Link to="/files/Transcript-Sinan.pdf" target="_blank" download>
+                <button className={styles.btn}>
+                    <div className={styles.dwn}>
+                        <FaFileDownload /> Transcript
+                    </div>
+                </button>
+
+
+            </Link>
+
+           
         </div>
     );
 };

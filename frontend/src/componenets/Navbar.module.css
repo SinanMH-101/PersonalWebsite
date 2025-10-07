@@ -35,3 +35,8 @@
     color: #1a1a1a;
     border-color: #1a1a1a;
 }
+
+.dwn{
+    display: flex;
+    gap: 5px;
+}
