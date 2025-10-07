@@ -20,18 +20,49 @@
     /* snap each card */
 }
 
-.head{
+.head {
     display: flex;
     justify-content: space-between;
 }
-.link{
-    color: rgb(158, 158, 158);
-    margin: 20px;
-    font-size: 25px;
-    font-style: italic;
+
+.view {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #9e9e9e;
+    text-decoration: none;
 }
 
-.link:hover{
+/* kill the purple visited color */
+.view:visited {
+    color: #9e9e9e;
+    text-decoration: none;
+}
+
+/* hover/focus together: text + icon change color in sync */
+.view:hover,
+.view:focus-visible {
     color: #00bfff;
     cursor: pointer;
+    outline: none;
+    /* optional; add your own focus ring below */
+}
+
+/* optional accessible focus ring */
+.view:focus-visible {
+    outline: 2px solid #00bfff;
+    outline-offset: 2px;
+}
+
+/* optional: text styling */
+.linkText {
+    font-size: 25px;
+    font-style: italic;
+    margin: 20px 5px;
+}
+
+
+.icon {
+    font-size: 20px;
+   
 }

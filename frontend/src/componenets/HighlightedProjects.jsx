@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import styles from "./HighlightedProjects.module.css";
 import { Link } from "react-router-dom";
+import { FaArrowRightLong } from "react-icons/fa6";
 import axios from "axios";
 
 const HighlightedProjects = () => {
@@ -25,10 +26,9 @@ const HighlightedProjects = () => {
         <div className={styles.container}>
             <div className={styles.head}>
                 <h2>Highlighted Projects: </h2>
-                <Link
-                    to={`/projects`}
-                >
-                    <p className={styles.link}>View All</p>
+                <Link to="/projects" className={styles.view}>
+                    <span className={styles.linkText}>view all</span>
+                    <FaArrowRightLong className={styles.icon} />
                 </Link>
 
             </div>
