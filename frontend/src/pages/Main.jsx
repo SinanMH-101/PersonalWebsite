@@ -1,12 +1,13 @@
 import Header from "../componenets/Heading";
-import Project from "../componenets/Projects";
+import Navbar from "../componenets/Navbar";
+import Project from "../componenets/HighlightedProjects";
 import WorkExp from "../componenets/WorkExp";
 
 const Main = () => {
   return (
     <div>
       <Header />
-      <Project />
+      <Project showAll={false} />
       <WorkExp />
     </div>
   );
