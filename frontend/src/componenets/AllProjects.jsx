@@ -4,7 +4,7 @@ import styles from "./AllProjects.module.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const AllProjects = () => {
+const AllProjects = ({ onLoadingChange }) => {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
@@ -14,6 +14,8 @@ const AllProjects = () => {
                 if (!alive) return;
                 setProjects(r.data);
             })
+            .finally(() => onLoadingChange?.(false));
+
         return () => { alive = false; };
     }, []);
 

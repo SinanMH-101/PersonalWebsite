@@ -1,3 +1,37 @@
-.container{
-    text-align: center;
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Style NavLink like a button */
+.btn {
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: #1a1a1a;
+    color: aliceblue;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    /* remove underline */
+    border: 1px solid aliceblue;
+    /* <- give the border a width & style */
+    transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background-color: aliceblue;
+    color: #1a1a1a;
+    border-color: #1a1a1a;
+}
+
+/* Active route stays highlighted */
+.active {
+    background-color: aliceblue;
+    color: #1a1a1a;
+    border-color: #1a1a1a;
 }
