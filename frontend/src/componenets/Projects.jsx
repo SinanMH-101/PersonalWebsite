@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
 import styles from "./Projects.module.css";
+import axios from "axios";
 
 const Project = () => {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3001/api/projects")
-            .then((r) => r.json())
-            .then(setProjects);
+        let alive = true;
+        axios
+            .get("/api/projects")
+            .then((r) => { if (alive) setProjects(r.data); })
+
+        return () => { alive = false; };
     }, []);
 
     return (

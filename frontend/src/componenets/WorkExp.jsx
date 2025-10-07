@@ -10,7 +10,7 @@ const WorkExp = () => {
     useEffect(() => {
         let alive = true;
         axios
-            .get("http://localhost:3001/api/workexp") // or "/api/workexp" if proxy set
+            .get("api/workexp")
             .then((r) => { if (alive) setData(r.data); })
             .catch(() => { if (alive) setErr("Failed to load work experience"); });
         return () => { alive = false; };
