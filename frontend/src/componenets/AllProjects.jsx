@@ -14,6 +14,8 @@ const AllProjects = ({ onLoadingChange }) => {
                 if (!alive) return;
                 setProjects(r.data);
             })
+            .catch(() => {
+            })
             .finally(() => onLoadingChange?.(false));
 
         return () => { alive = false; };
