@@ -14,6 +14,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express()
 app.use(express.json());
 app.use(cors());
+app.use(express.static('dist'))
 
 await mongoose.connect(process.env.MONGODB_URI);
 
