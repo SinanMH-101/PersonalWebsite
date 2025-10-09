@@ -37,7 +37,7 @@ const AllProjects = ({ onLoadingChange }) => {
             <div className={styles.scroller}>
                 {projects.map((p) => (
                     <div className={styles.item} key={p.id}>
-                        <ProjectCard classname={styles.card} title={p.title} short_desc={p.short_desc} />
+                        <ProjectCard classname={styles.card} title={p.title} short_desc={p.short_desc} imgPath={p.imgPath}/>
                     </div>
                 ))}
             </div>

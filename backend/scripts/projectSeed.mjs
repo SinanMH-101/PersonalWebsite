@@ -14,6 +14,7 @@ Used MobX for state management and TypeScript for type-safe component logic.`,
         tech: ["React", "TypeScript", "MobX", "Vite", "HTML", "CSS"],
         link: "",
         git: "",
+        imgPath: "assets/FlashCard.png",
         highlighted: true
     },
     {
@@ -25,6 +26,7 @@ Visualized trends and distributions with Matplotlib for clear insights.`,
         tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Scikit-learn"],
         link: "",
         git: "",
+        imgPath: "",
         highlighted: false
     },
     {
@@ -36,6 +38,7 @@ Added customizable home screen via SharedPreferences; wrote unit/widget tests wi
         tech: ["Flutter", "Firebase (Auth, Firestore, Storage)", "SharedPreferences", "Mockito"],
         link: "",
         git: "",
+        imgPath: "",
         highlighted: true
     },
     {
@@ -47,6 +50,7 @@ Applied object-oriented design to encapsulate account logic and practice event-d
         tech: ["Java", "Swing", "OOP", "GUI"],
         link: "",
         git: "",
+        imgPath: "",
         highlighted: false
     },
     {
@@ -60,6 +64,7 @@ How to run: start server with "python server.py", then connect clients with "pyt
         tech: ["Python 3", "socket", "threading", "TCP/IP", "CLI/Terminal"],
         link: "",
         git: "",
+        imgPath: "",
         highlighted: false
     },
     {
@@ -71,6 +76,7 @@ Developed as a practice project to strengthen React, TypeScript, and MobX skills
         tech: ["React", "TypeScript", "MobX", "Vite", "CSS", "LocalStorage"],
         link: "",
         git: "",
+        imgPath: "",
         highlighted: true
     }
 ]);

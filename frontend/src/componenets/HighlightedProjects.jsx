@@ -36,7 +36,7 @@ const HighlightedProjects = () => {
             <div className={styles.scroller}>
                 {projects.map((p) => (
                     <div className={styles.item} key={p.id}>
-                        <ProjectCard title={p.title} short_desc={p.short_desc} />
+                        <ProjectCard title={p.title} short_desc={p.short_desc} imgPath={p.imgPath} />
                     </div>
                 ))}
             </div>

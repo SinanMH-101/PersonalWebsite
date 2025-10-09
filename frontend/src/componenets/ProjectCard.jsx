@@ -7,7 +7,7 @@ const barVariants = {
     hover: { height: 150, backgroundColor: "rgba(0,0,0,0.55)" }
 };
 
-const ProjectCard = ({ title, short_desc }) => {
+const ProjectCard = ({ title, short_desc, imgPath }) => {
     return (
         <div>
             <motion.figure
@@ -20,7 +20,7 @@ const ProjectCard = ({ title, short_desc }) => {
             >
                 <img
                     className={styles.image}
-                    src="https://cdn-useast1.kapwing.com/static/templates/crying-cat-meme-template-regular-096fc808.webp"
+                    src={imgPath}
                     alt={title}
                 />
                 <figcaption className={styles.caption}>

@@ -20,6 +20,7 @@
     right: 0;
     bottom: 35px;
     margin-right: 30px;
+    text-decoration: none;
     color: #d8d8d8;
     display: flex;
     justify-content: center;
@@ -28,7 +29,13 @@
 }
 
 .heading-list a:visited {
+    color: #d8d8d8;
+
+}
+
+.heading-list a:link {
     color: inherit;
+
 }
 
 
