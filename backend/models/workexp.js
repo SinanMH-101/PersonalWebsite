@@ -7,7 +7,7 @@ const workSchema = new mongoose.Schema(
         duration: String,
         responsibilities: [String],
     },
-    { timestamps: true }
+    {  collection: 'workexps', timestamps: true }
 );
 
 workSchema.set("toJSON", {

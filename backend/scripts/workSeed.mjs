@@ -1,15 +1,8 @@
 import mongoose from "mongoose";
 import "dotenv/config";
+import WorkExp from "../models/workexp.js"
 
-const workSchema = new mongoose.Schema({
-    role: String,
-    company: String,
-    duration: String,
-    responsibilities: [String],
-});
-const WorkExp = mongoose.model("WorkExp", workSchema);
-
-await mongoose.connect(process.env.MONGODB_URI);
+await mongoose.connect(process.env.MONGODB_URI, { dbName: 'projects' });
 await WorkExp.deleteMany({});
 await WorkExp.insertMany([
     {

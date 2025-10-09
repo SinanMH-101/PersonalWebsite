@@ -1,12 +1,8 @@
 import mongoose from "mongoose";
 import "dotenv/config";
+import Project from "../models/projects.js"
 
-const projectSchema = new mongoose.Schema({
-    title: String, short_desc: String, long_desc: String, highlighted: Boolean,
-});
-const Project = mongoose.model("Project", projectSchema);
-
-await mongoose.connect(process.env.MONGODB_URI);
+await mongoose.connect(process.env.MONGODB_URI, { dbName: 'projects' });
 await Project.deleteMany({});
 await Project.insertMany([
     {

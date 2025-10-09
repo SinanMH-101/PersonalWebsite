@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static('dist'))
 
-await mongoose.connect(process.env.MONGODB_URI);
+await mongoose.connect(process.env.MONGODB_URI, { dbName: 'projects' });
 
 app.get('/', (request, response) => {
     response.send('<h1>Main Page</h1>')

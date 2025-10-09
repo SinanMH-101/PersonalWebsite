@@ -8,7 +8,7 @@ const projectSchema = new mongoose.Schema(
         long_desc: String,
         highlighted: { type: Boolean, default: false },
     },
-    { timestamps: true }
+    { collection: 'projects', timestamps: true }
 );
 
 projectSchema.set("toJSON", {
