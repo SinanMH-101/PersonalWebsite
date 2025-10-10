@@ -33,12 +33,21 @@ const HighlightedProjects = () => {
 
             </div>
 
-            <div className={styles.scroller}>
-                {projects.map((p) => (
-                    <div className={styles.item} key={p.id}>
-                        <ProjectCard title={p.title} short_desc={p.short_desc} imgPath={p.imgPath} />
+           <div className={styles.scroller}>
+                {projects.map((p) => {
+                const pid = p.id || p._id; // support either shape
+                return (
+                    <div className={styles.item} key={pid}>
+                    <Link to={`/projects/${pid}`} className={styles.cardLink}>
+                        <ProjectCard
+                        title={p.title}
+                        short_desc={p.short_desc}
+                        imgPath={p.imgPath}
+                        />
+                    </Link>
                     </div>
-                ))}
+                );
+                })}
             </div>
         </div>
     );

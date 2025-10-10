@@ -26,11 +26,6 @@ const AllProjects = ({ onLoadingChange }) => {
         <div className={styles.container}>
             <div className={styles.head}>
                 <h2>All Projects: </h2>
-                <Link
-                    to={`/projects`}
-                >
-                    <p className={styles.link}>View All</p>
-                </Link>
 
             </div>
 
