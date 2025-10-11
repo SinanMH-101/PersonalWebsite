@@ -2,12 +2,18 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ProjectCard from "../componenets/ProjectCard";
+import { ProjectHeading } from "../componenets/Heading";
+import styles from "./ProjectDetail.module.css"
 
 const ProjectDetaill = () => {
   const { id } = useParams();
   const [project, setProject] = useState(null);
   const [err, setErr] = useState("");
   const [loading, setLoading] = useState(true);
+
+  //to-do:
+  // add a back button
+  // resize image
 
   useEffect(() => {
     const controller = new AbortController();
@@ -39,17 +45,32 @@ const ProjectDetaill = () => {
   if (!project) return <p style={{ color: "white" }}>Not found</p>;
 
   return (
+
     <div>
-        <div style={{ color: "white", padding: 16 }}>
-            <h1>{project.title}</h1>
-            <img className = {"IMG"} src={`/${project.imgPath}`}></img>
-            
-            <p><strong>Short:</strong> {project.short_desc}</p>
-            <p><strong>Details:</strong> {project.long_desc}</p>
+      <ProjectHeading title={project.title}></ProjectHeading>
+      <div className={styles.container}>
+        <div className={styles.card} style={{ width: "350px" }}>
+          {/* <ProjectCard
+            title={project.title}
+            short_desc={project.short_desc}
+            imgPath={project.imgPath}
+            slide={false}
+          /> */}
+
+
+        </div>
+        <div className={styles.desc}>
+          <h2>{project.short_desc}</h2>
+          <p>{project.tech}</p>
+          <p>Github: {project.git}</p>
+          <p>Link: {project.link}</p>
+          <p><strong>Details:</strong> {project.long_desc}</p>
         </div>
 
+      </div>
+
     </div>
-  
+
   );
 };
 

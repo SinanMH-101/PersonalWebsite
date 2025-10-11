@@ -6,8 +6,12 @@ const projectSchema = new mongoose.Schema(
         title: { type: String, required: true },
         short_desc: String,
         long_desc: String,
-        imgPath : String,
+        imgPath: String,
+        tech: [String],
+        link: String,
+        git: String,
         highlighted: { type: Boolean, default: false },
+
     },
     { collection: 'projects', timestamps: true }
 );

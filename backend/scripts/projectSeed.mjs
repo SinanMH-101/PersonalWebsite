@@ -7,7 +7,7 @@ await Project.deleteMany({});
 await Project.insertMany([
     {
         title: "Flashcard Study App",
-        short_desc: "React + TypeScript flashcards with MobX and local persistence.",
+        short_desc: "A Flashcard App Made using React + TypeScript with MobX and local persistence.",
         long_desc: `Built an interactive flashcard app with real-time flipping, deletion, and local persistence.
 Developed reusable, modular React components to render and manage dynamic flashcards.
 Used MobX for state management and TypeScript for type-safe component logic.`,

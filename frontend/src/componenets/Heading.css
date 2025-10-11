@@ -43,3 +43,36 @@
     color: #00bfff;
     cursor: pointer;
 }
+
+.back {
+    position: absolute;
+    left: 24px;
+    bottom: 40px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #9ca3af;
+    /* gray-400 */
+    font-weight: 500;
+    padding: 4px 0;
+    cursor: pointer;
+}
+
+.back::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: #c7c7c7;
+    transition: width .2s ease;
+}
+
+.back:hover {
+    color: #e5e7eb;
+    /* gray-200 */
+}
+
+.back:hover::after,
+.back:focus-visible::after {
+    width: 100%;
+}
