@@ -71,7 +71,7 @@ const ProjectDetaill = () => {
 
   return (
 
-    <div>
+    <div className={styles.topcontainer}>
       <ProjectHeading title={project.title}></ProjectHeading>
       <div className={styles.container}>
         <div className={styles.card} style={{ width: "350px" }}>

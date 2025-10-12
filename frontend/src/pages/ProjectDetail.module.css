@@ -2,16 +2,25 @@
     width: 500px;
 }
 
+.topcontainer {
+    margin-top: 0px;
+}
+
 .container {
     position: relative;
     background-color: #1a1a1a;
-    padding: 20px;
+    margin-top: 0px;
+    padding: 20px 50px;
     border-radius: 8px;
     color: white;
-    margin: 20px 5%;
+    margin: 30px 5%;
     display: inline-block;
 }
 
 .card {
     display: inline-block;
+}
+
+.badge {
+    margin-right: 5px;
 }
