@@ -6,6 +6,7 @@ import WorkExp from "./componenets/WorkExp";
 import Main from "./pages/Main";
 import ProjectPage from "./pages/ProjectPage";
 import ProjectDetaill from "./pages/ProjectDetail";
+import ContactPage from "./pages/ContactPage";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Route path="/" element={<Main />} />
       <Route path="/projects" element={<ProjectPage></ProjectPage>} />
       <Route path="/projects/:id" element = {<ProjectDetaill></ProjectDetaill>}></Route>
+      <Route path="/contact" element={<ContactPage></ContactPage>} />
     </Routes>
   );
 };
