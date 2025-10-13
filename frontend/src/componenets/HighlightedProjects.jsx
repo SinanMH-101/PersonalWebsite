@@ -15,11 +15,13 @@ const HighlightedProjects = () => {
                 if (!alive) return;
                 const highlighted = r.data.filter(p => p.highlighted === true);
                 setProjects(highlighted);
-
+                
 
             })
         return () => { alive = false; };
     }, []);
+
+
 
 
     return (
@@ -35,6 +37,7 @@ const HighlightedProjects = () => {
 
            <div className={styles.scroller}>
                 {projects.map((p) => {
+                const techList = p.tech;
                 const pid = p.id || p._id; // support either shape
                 return (
                     <div className={styles.item} key={pid}>
@@ -43,6 +46,7 @@ const HighlightedProjects = () => {
                         title={p.title}
                         short_desc={p.short_desc}
                         imgPath={p.imgPath}
+                        tech={techList}
                         />
                     </Link>
                     </div>

@@ -1,13 +1,14 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 import styles from "./ProjectCard.module.css";
+import TechList from "./TexhList";
 
 const barVariants = {
-    rest: { height: 52, backgroundColor: "rgba(0,0,0,0.80)" },
-    hover: { height: 150, backgroundColor: "rgba(0,0,0,0.55)" }
+    rest: { height: 70, backgroundColor: "rgba(0,0,0,0.80)" },
+    hover: { height: 150, backgroundColor: "rgba(0,0,0,0.80)" }
 };
 
-const ProjectCard = ({ title, short_desc, imgPath, slide }) => {
+const ProjectCard = ({ title, short_desc, imgPath, slide, tech = [] }) => {
     if (slide == false) {
         return (
             <div>
@@ -31,6 +32,7 @@ const ProjectCard = ({ title, short_desc, imgPath, slide }) => {
                             transition={{ duration: 0.22, ease: "easeInOut" }}
                         >
                             <h1 className={styles.cardTitle}>{title}</h1>
+                            <TechList tech={tech} size={10}></TechList>
                             <p className={styles.desc}>{short_desc}</p>
                         </motion.div>
                     </figcaption>
@@ -60,6 +62,10 @@ const ProjectCard = ({ title, short_desc, imgPath, slide }) => {
                         transition={{ duration: 0.22, ease: "easeInOut" }}
                     >
                         <h1 className={styles.cardTitle}>{title}</h1>
+                        <div className={styles.techBar}>
+                            <TechList tech={tech} size={15}></TechList>
+                        </div>
+                        
                         <p className={styles.desc}>{short_desc}</p>
                     </motion.div>
                 </figcaption>

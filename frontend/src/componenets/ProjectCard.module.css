@@ -7,10 +7,12 @@
     border-radius: 10px;
     padding: 0px;
     margin: 0px;
+    
 }
 
 .card :hover {
     cursor: pointer;
+    
 }
 
 .image {
@@ -37,7 +39,7 @@
 .cardTitle {
     margin: 0 0 0 0;
     font-size: 25px;
-    padding: 10px 0px;
+    padding: 20px 0px;
     margin: 0px;
     color: rgb(218, 218, 218);
     text-align: center;
@@ -47,4 +49,10 @@
     margin: 0;
     font-size: 14px;
     color: #eee;
+}
+
+.techBar {
+  display: flex;            
+  justify-content: center;  
+  padding-bottom: 10px;
 }

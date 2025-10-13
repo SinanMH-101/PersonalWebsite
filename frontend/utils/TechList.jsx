@@ -13,7 +13,7 @@ export const techBadges = {
     "Yarn": "https://img.shields.io/badge/Yarn-2C8EBB?logo=yarn&logoColor=fff",
     "pnpm": "https://img.shields.io/badge/pnpm-F69220?logo=pnpm&logoColor=000",
     "HTML": "https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff",
-    "CSS": "https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff",
+    "CSS": "https://img.shields.io/badge/CSS-639?logo=css&logoColor=fff",
     "Tailwind CSS": "https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff",
     "Sass": "https://img.shields.io/badge/Sass-CC6699?logo=sass&logoColor=fff",
     "Styled Components": "https://img.shields.io/badge/styled--components-DB7093?logo=styledcomponents&logoColor=fff",

@@ -13,8 +13,8 @@
 }
 
 .item {
-    flex: 0 0 350px;
-    min-width: 350px;
+    flex: 0 0 400px;
+    min-width: 400px;
     /* match your card width */
     scroll-snap-align: start;
     /* snap each card */
