@@ -30,11 +30,22 @@ const AllProjects = ({ onLoadingChange }) => {
             </div>
 
             <div className={styles.scroller}>
-                {projects.map((p) => (
-                    <div className={styles.item} key={p.id}>
-                        <ProjectCard classname={styles.card} title={p.title} short_desc={p.short_desc} imgPath={p.imgPath} tech={p.tech}/>
-                    </div>
-                ))}
+                {projects.map((p) => {
+                    const techList = p.tech;
+                    const pid = p.id || p._id; // support either shape
+                    return (
+                        <div className={styles.item} key={pid}>
+                            <Link to={`/projects/${pid}`} className={styles.cardLink}>
+                                <ProjectCard
+                                    title={p.title}
+                                    short_desc={p.short_desc}
+                                    imgPath={p.imgPath}
+                                    tech={techList}
+                                />
+                            </Link>
+                        </div>
+                    );
+                })}
             </div>
         </div>
     );
