@@ -1,4 +1,4 @@
-import { techBadges } from "../../utils/techList";
+import { techBadges } from "../../utils/TechList.jsx";
 
 export default function TechList({ tech = [], size }) {
   if (!tech?.length) return null;
