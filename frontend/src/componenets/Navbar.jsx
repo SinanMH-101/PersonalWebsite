@@ -14,7 +14,7 @@ const Navbar = () => {
             <NavLink to="/contact" className={getClass}>Contact</NavLink>
              
 
-            {/* Convert these to real routes later */}
+   
             <Link to="/files/Sinan Haque CV.pdf" target="_blank" download>
                 <button className={styles.btn}>
                     <div className={styles.dwn}>

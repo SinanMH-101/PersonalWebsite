@@ -1,3 +1,4 @@
+import Footer from "../componenets/Footer";
 import Header from "../componenets/Heading";
 import Project from "../componenets/HighlightedProjects";
 import Navbar from "../componenets/Navbar";
@@ -7,9 +8,10 @@ const Main = () => {
   return (
     <div>
       <Header />
-      
+
       <Project showAll={false} />
       <WorkExp />
+      <Footer></Footer>
     </div>
   );
 };

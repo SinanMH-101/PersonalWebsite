@@ -1,15 +1,21 @@
 import Heading from "../componenets/Heading";
 import AllProjects from "../componenets/AllProjects";
 import { useState } from "react";
+import Footer from "../componenets/Footer";
 
 const ProjectPage = () => {
     const [loading, setLoading] = useState(true);
 
 
     return (
-        <div style={{ position: "relative" }}>
+        <div style={{ position: "relative" }} className="page">
             <Heading />
-            <AllProjects onLoadingChange={setLoading} />
+            <div className="content">
+                <AllProjects onLoadingChange={setLoading} />
+            </div>
+
+            <Footer></Footer>
+            
 
             {loading && (
                 <div

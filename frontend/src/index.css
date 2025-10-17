@@ -1,7 +1,30 @@
-body{
+body {
     background-color: rgb(11, 11, 11);
 }
 
-h2, p{
+h2,
+p {
     color: rgb(190, 190, 190);
+}
+
+/* global.css */
+html,
+body,
+#root {
+    height: 100%;
+}
+
+.page {
+    min-height: 100vh;
+    /* fill viewport */
+    display: flex;
+    flex-direction: column;
+    /* stack: header, main, footer */
+}
+
+.content {
+    flex: 1;
+    /* take remaining space, pushes footer down */
+    /* your page padding etc. */
+    padding: 0px 5%;
 }
