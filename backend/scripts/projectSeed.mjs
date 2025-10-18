@@ -44,7 +44,7 @@ Added customizable home screen via SharedPreferences; wrote unit/widget tests wi
         tech: ["Flutter", "Firebase (Auth, Firestore, Storage)", "SharedPreferences", "Mockito"],
         link: "",
         git: "https://github.com/SinanMH-101/CleanWalk",
-        imgPath: "",
+        imgPath: "assets/CleanWalk.png",
         highlighted: true
     },
     {
@@ -82,7 +82,7 @@ Developed as a practice project to strengthen React, TypeScript, and MobX skills
         tech: ["React", "TypeScript", "MobX", "Vite", "CSS", "LocalStorage"],
         link: "",
         git: "https://github.com/SinanMH-101/personal_finance_tracker",
-        imgPath: "",
+        imgPath:  "assets/PersonalFinanceTracker.png",
         highlighted: true
     }
 ]);
