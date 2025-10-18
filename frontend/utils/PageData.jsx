@@ -84,7 +84,7 @@ export const PageData =
                           <p>This was one of my first frontend projects, so I focused on learning how React works and built something I’d actually use from time to time.</p>
                           <p>I’m happy with the outcome and plan to sync it to a database later; for now, local persistence is sufficient.</p>`,
 
-  "Personal Finance Tracker": `<p><strong>Personal Finance Tracker</strong> is a simple, modern web app for managing day-to-day finances. Users can add income and expense transactions, see live balance updates, and keep their data locally without a backend—perfect for quick personal budgeting.</p>
+  "Personal Finance Tracker": `<p><strong>Personal Finance Tracker</strong> is a simple, modern web app for managing day-to-day finances. Users can add income and expense transactions, see live balance updates, and keep their data locally without a backend - perfect for quick personal budgeting.</p>
 
                               <p><strong>Features:</strong></p>
                               <ul>

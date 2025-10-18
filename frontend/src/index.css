@@ -3,7 +3,8 @@ body {
 }
 
 h2,
-p {
+p,
+li {
     color: rgb(190, 190, 190);
 }
 
