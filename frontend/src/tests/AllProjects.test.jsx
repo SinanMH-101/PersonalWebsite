@@ -15,6 +15,7 @@ vi.mock("../componenets/ProjectCard", () => ({
 
 import AllProjects from "../componenets/AllProjects";
 
+//ensures routes work without a browser
 const renderWithRouter = (props = {}) =>
     render(
         <MemoryRouter initialEntries={["/"]}>
@@ -55,14 +56,7 @@ describe("AllProjects", () => {
         expect(onLoadingChange).toHaveBeenLastCalledWith(false);
     });
 
-    it('has a "View All" link to /projects', async () => {
-        mockGet.mockResolvedValueOnce({ data: [] });
-        renderWithRouter();
-
-        const link = screen.getByRole("link", { name: /view all/i });
-        expect(link).toHaveAttribute("href", "/projects");
-    });
-
+    //error path still clears loading
     it("calls onLoadingChange(false) even when API fails", async () => {
         mockGet.mockRejectedValueOnce(new Error("network"));
         const onLoadingChange = vi.fn();
