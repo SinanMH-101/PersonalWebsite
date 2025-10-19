@@ -21,7 +21,7 @@ describe("Navbar", () => {
 
     expect(screen.getByRole("link", { name: /home/i })).toBeInTheDocument();
     expect(screen.getByRole("link", { name: /projects/i })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /contact/i })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: /contact/i })).toBeInTheDocument();
 
     // CV + Transcript links (wrapped <button/> inside <a/>)
     expect(screen.getByRole("link", { name: /cv/i })).toBeInTheDocument();
