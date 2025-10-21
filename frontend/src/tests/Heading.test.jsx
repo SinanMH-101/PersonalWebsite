@@ -13,7 +13,7 @@ describe("Heading", () => {
         render(<Heading />);
 
         // Title
-        expect(screen.getByRole("heading", { name: /sinan haque/i })).toBeInTheDocument();
+        expect(screen.getByRole("heading", { name: /sinan mustanjid haque/i })).toBeInTheDocument();
 
         // Exactly two social links (GitHub + LinkedIn)
         const links = screen.getAllByRole("link");
